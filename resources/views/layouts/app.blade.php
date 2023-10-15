@@ -9,22 +9,39 @@
     <title>DevStagram - @yield('titulo')</title>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <a href="/">Principal</a>
-        </nav>
+<body class="bg-gray-100">
+    <header class="p-5 border-b bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center">
+            <a
+            class="text-3xl font-black"
+            href="/">
+                DevStagram
+            </a>
+            <nav
+            class="flex gap-2 items-center">
+            <a
+            class="font-bold uppercase text-gray-600 text-sm"
+            href="#">
+                Login
+            </a>
+            <a
+            class="font-bold uppercase text-gray-600 text-sm"
+            href="#"  >
+                Crear Cuenta
+            </a>
+            </nav>
     </header>
-    <main class="container mx-auto mt-10">
-        <h2 class="font-black text-center  text-3xl mb-10">
+    <main
+    class="container mx-auto mt-10">
+        <h1
+        class="font-black text-center  text-3xl mb-10">
             @yield('titulo')
-        </h2>
+        </h1>
         @yield('contenido')
     </main>
-    <footer class="mt-10 text-center p-5 text-gray-500 font-bold uppercase">
-        DevStagram - Todos los derechos reservados
-        {{ now()->year }}
+    <footer
+    class="mt-10 text-center p-5 text-gray-500 font-bold uppercase">
+        DevStagram - Todos los derechos reservados {{ now()->year }}
     </footer>
 </body>
-
 </html>
