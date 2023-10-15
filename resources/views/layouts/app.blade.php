@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
+    @stack('styles')
+    @vite('resources/js/app.js')
 
     <title>DevStagram - @yield('titulo')</title>
 </head>
@@ -21,7 +23,7 @@
                 <nav class="flex gap-2 items-center">
                     <a
                         class="flex items-center gap-2 bg-white border p-2 text-gray-600 rounded text-sm uppercase font-bold cursor-pointer"
-                        href="#"
+                        href="{{route('posts.create')}}"
                     >
 
                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
