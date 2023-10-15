@@ -21,3 +21,12 @@ Route::get('/', function () {
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'store']);
+
+
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/{user:username}/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
