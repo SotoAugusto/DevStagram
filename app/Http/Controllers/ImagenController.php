@@ -16,14 +16,16 @@ class ImagenController extends Controller
         // genera un nombre único para la imagen, incluyendo la extensión
         $nombreImagen = Str::uuid() . "." . $imagen->extension();
 
+        // crea una instancia de la InterventionImage
+        $imagenServidor = Image::make($imagen);
+        // redimensiona la imagen
+        $imagenServidor->fit(1000, 1000);
 
-        // $imagenServidor = Image::make($imagen);
-        // $imagenServidor->fit(1000, 1000);
+        // guarda la imagen en el directorio uploads en public (crear carpeta uploads si no existe)
+        $imagenPath = public_path('uploads') . '/' . $nombreImagen;
+        $imagenServidor->save($imagenPath);
 
-        // $imagenPath = public_path('uploads') . '/' . $nombreImagen;
-        // $imagenServidor->save($imagenPath);
-
-        // retorna el nombre de la imagen como json response
+        // retorna el nombre de la imagen como json response, almacena el nombre en la db
         return response()->json(['imagen' => $nombreImagen ]);
     }
 }

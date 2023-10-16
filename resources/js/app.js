@@ -46,21 +46,21 @@ if(document.querySelector('#dropzone')) {
 
     // debugging
 
-    // dropzone.on("sending", function (file, xhr, formData) {
-    //     console.log(formData);
-    // });
+    dropzone.on("sending", function (file, xhr, formData) {
+        console.log(formData);
+    });
 
-    // // print json response from imagencontroller
-    // dropzone.on("success", function (file, response) { console.log(response,) ;
-    // });
+    // print json response from imagencontroller
+    dropzone.on("success", function (file, response) { console.log(response,) ;
+    });
 
-    // dropzone.on("error", function (file, xhr, message) {
-    //     console.log(message) ;
-    // });
+    dropzone.on("error", function (file, xhr, message) {
+        console.log(message) ;
+    });
 
-    // dropzone.on("removedfile", function () {
-    //     console.log("Archivo eliminado") ;
-    // });
+    dropzone.on("removedfile", function () {
+        console.log("Archivo eliminado") ;
+    });
 
 
 
