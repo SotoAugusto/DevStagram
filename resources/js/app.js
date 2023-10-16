@@ -44,4 +44,26 @@ if(document.querySelector('#dropzone')) {
         document.querySelector('[name="imagen"]').value = "";
     });
 
+    // debugging
+
+    // dropzone.on("sending", function (file, xhr, formData) {
+    //     console.log(formData);
+    // });
+
+    // // print json response from imagencontroller
+    // dropzone.on("success", function (file, response) { console.log(response,) ;
+    // });
+
+    // dropzone.on("error", function (file, xhr, message) {
+    //     console.log(message) ;
+    // });
+
+    // dropzone.on("removedfile", function () {
+    //     console.log("Archivo eliminado") ;
+    // });
+
+
+
+
+
 }
