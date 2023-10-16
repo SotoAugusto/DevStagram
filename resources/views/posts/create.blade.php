@@ -57,6 +57,7 @@
                     @enderror
                 </div>
 
+                {{-- crear un input oculto para imagen --}}
                 <div class="mb-5">
                     <input
                         name="imagen"
